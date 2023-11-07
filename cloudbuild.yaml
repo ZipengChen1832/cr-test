@@ -13,4 +13,4 @@ steps:
     args: ["run", "deploy"]
 
 images:
-  - "/$PROJECT_ID/cra-test/cra-image"
+  - "gcr.io/$PROJECT_ID/cra-test/cra-image"
