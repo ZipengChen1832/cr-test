@@ -10,7 +10,7 @@ steps:
 
   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
     entrypoint: "gcloud"
-    args: ["run", "deploy","--image-url=gcr.io/$PROJECT_ID/cra-test/cra-image"]
+    args: ["run", "deploy","--image=gcr.io/$PROJECT_ID/cra-test/cra-image"]
 
 images:
   - "gcr.io/$PROJECT_ID/cra-test/cra-image"
