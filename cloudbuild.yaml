@@ -12,3 +12,5 @@ steps:
     entrypoint: "gcloud"
     args: ["run", "deploy"]
 
+images:
+  - "/$PROJECT_ID/cra-test/cra-image"
