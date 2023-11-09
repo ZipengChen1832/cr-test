@@ -8,9 +8,20 @@ steps:
   - name: "gcr.io/cloud-builders/npm"
     args: ["run", "build"]
 
-  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
-    entrypoint: "gcloud"
-    args: ["run", "deploy","--image=gcr.io/$PROJECT_ID/cra-test/cra-image"]
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "build",
+        "-t",
+        "gcr.io/$PROJECT_ID/cr-test/image",
+        "-f",
+        "./Dockerfile",
+        ".",
+      ]
+
+  # - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+  #   entrypoint: "gcloud"
+  #   args: ["run", "deploy","--image=gcr.io/$PROJECT_ID/cra-test/cra-image"]
 
 images:
   - "gcr.io/$PROJECT_ID/cra-test/cra-image"
