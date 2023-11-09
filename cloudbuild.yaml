@@ -13,7 +13,7 @@ steps:
       [
         "build",
         "-t",
-        "gcr.io/$PROJECT_ID/cr-test/image",
+        "us-central1-docker.pkg.dev/$PROJECT_ID/cr-test/image",
         "-f",
         "./Dockerfile",
         ".",
@@ -24,4 +24,4 @@ steps:
   #   args: ["run", "deploy","--image=gcr.io/$PROJECT_ID/cra-test/cra-image"]
 
 images:
-  - "gcr.io/$PROJECT_ID/cr-test/image"
+  - "us-central1-docker.pkg.dev/$PROJECT_ID/cr-test/image"
