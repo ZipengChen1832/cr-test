@@ -32,7 +32,6 @@ steps:
         "--region",
         "us-central1"
       ]
-
   # - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
   #   entrypoint: "gcloud"
   #   args: ["run", "deploy","--image=gcr.io/$PROJECT_ID/cra-test/cra-image"]
