@@ -19,6 +19,20 @@ steps:
         ".",
       ]
 
+  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    entrypoint: gcloud
+    args:
+      [
+        "run",
+        "deploy",
+        "cr-run-service",
+        "--image",
+        # "us-central1-docker.pkg.dev/$PROJECT_ID/cr-test/image",
+        "gcr.io/$PROJECT_ID/cr-test/image",
+        "--region",
+        "us-central1"
+      ]
+
   # - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
   #   entrypoint: "gcloud"
   #   args: ["run", "deploy","--image=gcr.io/$PROJECT_ID/cra-test/cra-image"]
