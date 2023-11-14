@@ -25,7 +25,7 @@ steps:
       [
         "run",
         "deploy",
-        "cr-run-service",
+        "cr-run-service2",
         "--image",
         # "us-central1-docker.pkg.dev/$PROJECT_ID/cr-test/image"
         "gcr.io/$PROJECT_ID/cr-test/image",
